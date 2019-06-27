@@ -2,9 +2,11 @@
 
     <PropertyGroup>
         <Description>A simple logic simulation library</Description>
-        <VersionPrefix>0.1</VersionPrefix>
+        <VersionPrefix>0.1.1</VersionPrefix>
         <Authors>Ariel Simulevski</Authors>
         <TargetFramework>netcoreapp2.2</TargetFramework>
+        <PackageId>Silo</PackageId>
+        <PackageProjectUrl>https://github.com/Azer0s/Silo</PackageProjectUrl>
+        <NuspecFile>silo.nuspec</NuspecFile>
     </PropertyGroup>
-
 </Project>

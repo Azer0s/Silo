@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Silo</id>
+        <version>0.1.1</version>
+        <description>A simple logic simulation library</description>
+        <authors>Ariel Simulevski</authors>
+        <owners>Azer0s</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <licenseUrl>https://github.com/Azer0s/Silo/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Azer0s/Silo</projectUrl>
+        <iconUrl>https://github.com/Azer0s/Silo/blob/master/assets/logo.png?raw=true</iconUrl>
+        <tags>logic-gates logic-simulator simulator</tags>
+    </metadata>
+</package>

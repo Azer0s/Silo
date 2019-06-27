@@ -1,7 +1,14 @@
 namespace Silo.Gates
 {
-    public class OrGate
+    public class OrGate : Component
     {
-        
+        public OrGate() : base(2, 1)
+        {
+        }
+
+        public override void Update()
+        {
+            UpdateOutput(0, _inPorts[0].State || _inPorts[1].State);
+        }
     }
 }

@@ -1,8 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silo", "Silo\Silo.csproj", "{6E80FF41-70AB-43C3-89E8-0C2A6A88CBBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiloTest", "SiloTest\SiloTest.csproj", "{3AA937F4-7081-45EB-B278-57D7458CAA1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E80FF41-70AB-43C3-89E8-0C2A6A88CBBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E80FF41-70AB-43C3-89E8-0C2A6A88CBBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E80FF41-70AB-43C3-89E8-0C2A6A88CBBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E80FF41-70AB-43C3-89E8-0C2A6A88CBBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AA937F4-7081-45EB-B278-57D7458CAA1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AA937F4-7081-45EB-B278-57D7458CAA1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AA937F4-7081-45EB-B278-57D7458CAA1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AA937F4-7081-45EB-B278-57D7458CAA1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

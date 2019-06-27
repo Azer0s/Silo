@@ -6,4 +6,8 @@
         <RootNamespace>SoliTest</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Silo\Silo.csproj" />
+    </ItemGroup>
+
 </Project>

@@ -33,7 +33,7 @@ namespace Silo.Devices
             _fa6.AttachTo(_fa7, 1, 2);
         }
 
-        public void AttachToFull(Component comp, int offset = 0)
+        public void AttachToAll(Component comp, int offset = 0)
         {
             AttachTo(comp, 0, 0 + offset);
             AttachTo(comp, 1, 1 + offset);

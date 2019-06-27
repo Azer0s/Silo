@@ -81,8 +81,8 @@ namespace SiloTest
             Console.WriteLine(add1);
             
             var display = new EightBitDisplay();
-            add1.AttachToFull(display);
-            Console.WriteLine(display.Value);
+            add1.AttachToAll(display);
+            Console.WriteLine(display);
 
             #endregion
 
@@ -101,12 +101,12 @@ namespace SiloTest
             
             var add3 = new EightBitAdder();
             
-            add1.AttachToFull(add3);
-            add2.AttachToFull(add3, 8);
+            add1.AttachToAll(add3);
+            add2.AttachToAll(add3, 8);
             
             var display2 = new EightBitDisplay();
-            add3.AttachToFull(display2);
-            Console.WriteLine(display2.Value);
+            add3.AttachToAll(display2);
+            Console.WriteLine(display2);
 
             #endregion
         }

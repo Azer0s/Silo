@@ -15,5 +15,10 @@ namespace Silo.Components
         {
             Value = _inPorts.Select(a => a.State).ToArray().ConvertToByte();
         }
+
+        public override string ToString()
+        {
+            return $"Value: {Value}";
+        }
     }
 }

@@ -105,29 +105,29 @@ namespace Silo.Devices
         
         public override void Update()
         {
-            _ha.SetPortState(0, GetInPortState(A1In));
-            _ha.SetPortState(1, GetInPortState(A2In));
+            _ha.SetPortState(0, GetPortInState(A1In));
+            _ha.SetPortState(1, GetPortInState(A2In));
                 
-            _fa1.SetPortState(0, GetInPortState(B1In));
-            _fa1.SetPortState(1, GetInPortState(B2In));
+            _fa1.SetPortState(0, GetPortInState(B1In));
+            _fa1.SetPortState(1, GetPortInState(B2In));
 
-            _fa2.SetPortState(0, GetInPortState(C1In));
-            _fa2.SetPortState(1, GetInPortState(C2In));
+            _fa2.SetPortState(0, GetPortInState(C1In));
+            _fa2.SetPortState(1, GetPortInState(C2In));
 
-            _fa3.SetPortState(0, GetInPortState(D1In));
-            _fa3.SetPortState(1, GetInPortState(D2In));
+            _fa3.SetPortState(0, GetPortInState(D1In));
+            _fa3.SetPortState(1, GetPortInState(D2In));
 
-            _fa4.SetPortState(0, GetInPortState(E1In));
-            _fa4.SetPortState(1, GetInPortState(E2In));
+            _fa4.SetPortState(0, GetPortInState(E1In));
+            _fa4.SetPortState(1, GetPortInState(E2In));
 
-            _fa5.SetPortState(0, GetInPortState(F1In));
-            _fa5.SetPortState(1, GetInPortState(F2In));
+            _fa5.SetPortState(0, GetPortInState(F1In));
+            _fa5.SetPortState(1, GetPortInState(F2In));
 
-            _fa6.SetPortState(0, GetInPortState(G1In));
-            _fa6.SetPortState(1, GetInPortState(G2In));
+            _fa6.SetPortState(0, GetPortInState(G1In));
+            _fa6.SetPortState(1, GetPortInState(G2In));
 
-            _fa7.SetPortState(0, GetInPortState(H1In));
-            _fa7.SetPortState(1, GetInPortState(H2In));
+            _fa7.SetPortState(0, GetPortInState(H1In));
+            _fa7.SetPortState(1, GetPortInState(H2In));
 
             UpdateOutput(CarryOut, _fa7.GetPortState(1));
             UpdateOutput(HOut, _fa7.OutState());

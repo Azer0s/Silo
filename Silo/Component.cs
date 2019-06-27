@@ -64,12 +64,7 @@ namespace Silo
             return _outPorts[port].State;
         }
 
-        protected bool GetInPortState(int port)
-        {
-            return _inPorts[port].State;
-        }
-
-        protected bool GetInPortState(int port, int offset)
+        protected bool GetPortInState(int port, int offset = 0)
         {
             return _inPorts[port + offset].State;
         }

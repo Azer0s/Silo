@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Threading;
 using Silo.Components;
 using Silo.Devices;
 using Silo.Gates;
+using Silo.Memory;
 
 namespace SiloTest
 {
@@ -109,6 +111,43 @@ namespace SiloTest
             Console.WriteLine(display2);
 
             #endregion
+
+            #region D FlipFlop with pseudo clock
+
+            var d = new DFlipFlop();
+            var val = new Switch();
+            var clk = new Switch();
+            
+            val.AttachTo(d, 0);
+            clk.AttachTo(d, 1);
+
+            val.State = true;
+            clk.State = true;
+            
+            val.State = false;
+            
+            clk.State = false;
+            clk.State = true;
+
+            #endregion
+
+            #region D Flip Flop with real clock
+
+            var clk1 = new Clock(TimeSpan.FromSeconds(1));
+            clk1.AttachTo(d, 1);
+            val.State = true;
+            Console.WriteLine(d);
+            Thread.Sleep(2000);
+            Console.WriteLine(d);
+
+            val.State = false;
+            Console.WriteLine(d);
+            Thread.Sleep(2000);
+            Console.WriteLine(d);
+
+            #endregion
+
+            Console.ReadKey();
         }
     }
 }

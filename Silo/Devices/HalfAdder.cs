@@ -24,11 +24,11 @@ namespace Silo.Devices
 
         public override void Update()
         {
-            _xor.SetPortState(0, GetInPortState(0));
-            _xor.SetPortState(1, GetInPortState(1));
+            _xor.SetPortState(0, GetPortInState(0));
+            _xor.SetPortState(1, GetPortInState(1));
 
-            _and.SetPortState(0, GetInPortState(0));
-            _and.SetPortState(1, GetInPortState(1));
+            _and.SetPortState(0, GetPortInState(0));
+            _and.SetPortState(1, GetPortInState(1));
 
             _xor.Update();
             _and.Update();

@@ -16,7 +16,7 @@ namespace Silo.Gates
 
         public override void Update()
         {
-            UpdateOutput(0, _inPorts[0].State || _inPorts[1].State);
+            UpdateOutput(0, GetPortInState(0) || GetPortInState(1));
         }
     }
 }

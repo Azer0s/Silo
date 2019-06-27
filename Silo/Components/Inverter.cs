@@ -15,7 +15,7 @@ namespace Silo.Components
 
         public override void Update()
         {
-            UpdateOutput(0, !_inPorts[0].State);
+            UpdateOutput(0, !GetPortInState(0));
         }
     }
 }

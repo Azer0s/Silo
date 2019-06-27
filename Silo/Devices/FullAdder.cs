@@ -2,6 +2,16 @@ using Silo.Gates;
 
 namespace Silo.Devices
 {
+    /// <summary>
+    /// <para>Input Map:</para>
+    /// 0: A<para/>
+    /// 1: B<para/>
+    /// 2: Carry In<para/>
+    /// <para/>
+    /// Output Map:<para/>
+    /// 0: Sum<para/>
+    /// 1: Carry<para/>
+    /// </summary>
     public class FullAdder : Component
     {
         private readonly Component _and1;

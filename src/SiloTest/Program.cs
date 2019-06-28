@@ -156,7 +156,7 @@ namespace SiloTest
             Console.WriteLine("\nD Flip Flop with real clock");
             Console.WriteLine("------------------------");
 
-            var clk1 = new Clock(Frequency.Parse("1 Hz"));
+            var clk1 = new Clock(1.Hz());
             clk1.AttachTo(d, 1);
             val.State = true;
             Console.WriteLine(d);

@@ -1,9 +1,30 @@
 using System;
+// ReSharper disable InconsistentNaming
 
 namespace Silo.Util
 {
     public static class Extensions
     {
+        public static Frequency Hz(this int a)
+        {
+            return Frequency.Parse($"{a} Hz");
+        }
+
+        public static Frequency Hz(this double a)
+        {
+            return Frequency.Parse($"{a} Hz");
+        }
+        
+        public static Frequency kHz(this int a)
+        {
+            return Frequency.Parse($"{a} kHz");
+        }
+
+        public static Frequency kHz(this double a)
+        {
+            return Frequency.Parse($"{a} kHz");
+        }
+        
         public static bool[] ConvertToBoolArray(this byte b)
         {
             // prepare the return result

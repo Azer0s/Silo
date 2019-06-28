@@ -1,6 +1,7 @@
+- [ ] Unit test components
 - [ ] Multiplexer
 - [ ] Demultiplexer
 - [ ] Shift Register
 - [ ] Counter
-- [ ] S-R Flip-Flop
+- [x] S-R Flip-Flop
 - [ ] VHDL Simulation

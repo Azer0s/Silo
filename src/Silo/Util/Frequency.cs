@@ -39,7 +39,7 @@ namespace Silo.Util
                 seconds = 1 / (value * 1000);
             }
 
-            return TimeSpan.FromSeconds(seconds);
+            return TimeSpan.FromMilliseconds(seconds * 1000);
         }
 
         public static implicit operator TimeSpan(Frequency f)

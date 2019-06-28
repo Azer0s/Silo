@@ -4,6 +4,7 @@ using Silo.Components;
 using Silo.Devices;
 using Silo.Gates;
 using Silo.Memory;
+using Silo.Util;
 
 namespace SiloTest
 {
@@ -132,8 +133,8 @@ namespace SiloTest
             #endregion
 
             #region D Flip Flop with real clock
-
-            var clk1 = new Clock(TimeSpan.FromSeconds(1));
+            
+            var clk1 = new Clock(Frequency.Parse("1 Hz"));
             clk1.AttachTo(d, 1);
             val.State = true;
             Console.WriteLine(d);

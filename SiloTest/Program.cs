@@ -18,6 +18,9 @@ namespace SiloTest
 
             #region AndGate
 
+            Console.WriteLine("AND Gate Test");
+            Console.WriteLine("------------------------");
+            
             var inv = new Inverter();
 
             b.AttachTo(inv, 0);
@@ -36,6 +39,9 @@ namespace SiloTest
 
             #region 8 bit input
 
+            Console.WriteLine("\n8 bit input");
+            Console.WriteLine("------------------------");
+
             var inp = new EightBitInput {State = 200};
 
             Console.WriteLine(inp);
@@ -43,6 +49,9 @@ namespace SiloTest
             #endregion
             
             #region FullAdder
+
+            Console.WriteLine("\nFull Adder");
+            Console.WriteLine("------------------------");
 
             a.State = false;
             b.State = false;
@@ -70,6 +79,9 @@ namespace SiloTest
 
             #region 8 bit Adder
 
+            Console.WriteLine("\n8 bit Adder");
+            Console.WriteLine("------------------------");
+
             var in1 = new EightBitInput();
             var in2 = new EightBitInput();
             
@@ -90,6 +102,9 @@ namespace SiloTest
             #endregion
 
             #region Dual 8 bit adder
+
+            Console.WriteLine("\nDual 8 bit Adder");
+            Console.WriteLine("------------------------");
 
             var in3 = new EightBitInput();
             var in4 = new EightBitInput();
@@ -115,6 +130,9 @@ namespace SiloTest
 
             #region D FlipFlop with pseudo clock
 
+            Console.WriteLine("\nD FlipFlop with pseudo clock");
+            Console.WriteLine("------------------------");
+
             var d = new DFlipFlop();
             var val = new Switch();
             var clk = new Switch();
@@ -124,16 +142,20 @@ namespace SiloTest
 
             val.State = true;
             clk.State = true;
+            Console.WriteLine(d);
             
             val.State = false;
-            
             clk.State = false;
             clk.State = true;
+            Console.WriteLine(d);
 
             #endregion
 
             #region D Flip Flop with real clock
             
+            Console.WriteLine("\nD Flip Flop with real clock");
+            Console.WriteLine("------------------------");
+
             var clk1 = new Clock(Frequency.Parse("1 Hz"));
             clk1.AttachTo(d, 1);
             val.State = true;

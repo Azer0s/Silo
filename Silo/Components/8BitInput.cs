@@ -59,7 +59,7 @@ namespace Silo.Components
             AttachTo(component, 7, 7);
         }
 
-        public void AttachTo(Component component, int offset)
+        public new void AttachTo(Component component, int offset)
         {
             AttachTo(component, 0, 0 + offset);
             AttachTo(component, 1, 1 + offset);

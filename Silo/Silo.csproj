@@ -1,8 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <Description>A simple logic simulation library</Description>
-        <VersionPrefix>0.1.1</VersionPrefix>
         <Authors>Ariel Simulevski</Authors>
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <PackageId>Silo</PackageId>

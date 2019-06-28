@@ -65,3 +65,27 @@ adder.AttachToAll(display);
 Console.WriteLine(display);
 
 ```
+
+### D Flip-Flop with clock
+
+```cs
+using Silo.Components;
+using Silo.Memory;
+using Silo.Util;
+
+var flipFlop = new DFlipFlop();
+var val = new Switch();
+var clk = new Clock(Frequency.Parse("1 Hz"));
+
+clk.AttachTo(flipFlop, 1);
+
+val.State = true;
+Console.WriteLine(flipFlop);
+Thread.Sleep(2000);
+Console.WriteLine(flipFlop);
+
+val.State = false;
+Console.WriteLine(flipFlop);
+Thread.Sleep(2000);
+Console.WriteLine(flipFlop);
+```

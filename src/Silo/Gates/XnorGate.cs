@@ -8,15 +8,15 @@ namespace Silo.Gates
     /// Output Map:<para/>
     /// 0: Output<para/>
     /// </summary>
-    public class XorGate : Component
+    public class XnorGate : Component
     {
-        public XorGate() : base(2, 1)
+        public XnorGate() : base(2, 1)
         {
         }
 
         public override void DoUpdate()
         {
-            UpdateOutput(0, GetPortInState(0) ^ GetPortInState(1));
+            UpdateOutput(0, GetPortInState(0) == GetPortInState(1));
         }
     }
 }

@@ -105,7 +105,7 @@ namespace Silo.Devices
             AttachRange(comp, 1, 8, offset: offset);
         }
 
-        public override void Update()
+        public override void DoUpdate()
         {
             _ha.SetPortState(0, GetPortInState(A1In));
             _ha.SetPortState(1, GetPortInState(A2In));

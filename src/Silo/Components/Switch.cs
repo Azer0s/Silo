@@ -19,7 +19,7 @@ namespace Silo.Components
             }
         }
 
-        public override void Update()
+        public override void DoUpdate()
         {
             throw new NotImplementedException();
         }

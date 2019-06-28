@@ -26,7 +26,7 @@ namespace Silo.Devices
             _and = new AndGate();
         }
 
-        public override void Update()
+        public override void DoUpdate()
         {
             _xor.SetPortState(0, GetPortInState(0));
             _xor.SetPortState(1, GetPortInState(1));

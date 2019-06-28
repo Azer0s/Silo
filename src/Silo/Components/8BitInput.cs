@@ -71,7 +71,7 @@ namespace Silo.Components
             AttachTo(component, 7, 7 + offset);
         }
 
-        public override void Update()
+        public override void DoUpdate()
         {
             throw new NotImplementedException();
         }

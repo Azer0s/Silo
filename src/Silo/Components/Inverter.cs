@@ -11,9 +11,10 @@ namespace Silo.Components
     {
         public Inverter() : base(1, 1)
         {
+            UpdateOutput(0, true);
         }
 
-        public override void Update()
+        public override void DoUpdate()
         {
             UpdateOutput(0, !GetPortInState(0));
         }

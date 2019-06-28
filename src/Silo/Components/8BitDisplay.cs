@@ -11,7 +11,7 @@ namespace Silo.Components
         {
         }
 
-        public override void Update()
+        public override void DoUpdate()
         {
             Value = InPorts.Select(a => a.State).ToArray().ConvertToByte();
         }

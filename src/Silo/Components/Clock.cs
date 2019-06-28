@@ -17,7 +17,7 @@ namespace Silo.Components
             timer.Start();
         }
 
-        public override void Update()
+        public override void DoUpdate()
         {
             throw new NotImplementedException();
         }

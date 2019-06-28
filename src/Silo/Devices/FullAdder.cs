@@ -38,7 +38,7 @@ namespace Silo.Devices
             _and1.AttachTo(_or, 1);
         }
 
-        public override void Update()
+        public override void DoUpdate()
         {
             _xor1.SetPortState(0, GetPortInState(0));
             _xor1.SetPortState(1, GetPortInState(1));

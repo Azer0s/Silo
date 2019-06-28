@@ -31,8 +31,11 @@ namespace SiloTest
             inv.AttachTo(andGate, 1);
 
             a.State = true;
-            b.State = false;
+            b.State = true;
 
+            Console.WriteLine(andGate);
+
+            b.State = false;
             Console.WriteLine(andGate);
 
             #endregion

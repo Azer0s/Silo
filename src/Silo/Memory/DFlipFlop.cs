@@ -18,14 +18,8 @@ namespace Silo.Memory
             UpdateOutput(1, true);
         }
 
-        public override void Update()
+        public override void DoUpdate()
         {
-            if (Current.SequenceEqual(Last))
-            {
-                //do nothing
-                return;
-            }
-
             if (Current[0] == Last[0])
             {
                 //value stayed the same
@@ -43,8 +37,6 @@ namespace Silo.Memory
                 //clock stayed the same
                 //do nothing
             }
-            
-            SaveCurrentState();
         }
     }
 }

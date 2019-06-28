@@ -151,14 +151,27 @@ namespace Silo
         /// <summary>
         /// Save the current input port state
         /// </summary>
-        protected void SaveCurrentState()
+        private void SaveCurrentState()
         {
             Last = Current.Select(a => a).ToArray();
         }
 
+        public virtual void Update()
+        {
+            if (Current.SequenceEqual(Last))
+            {
+                //do nothing
+                return;
+            }
+            
+            DoUpdate();
+            
+            SaveCurrentState();
+        }
+        
         /// <summary>
         /// Update the component
         /// </summary>
-        public abstract void Update();
+        public abstract void DoUpdate();
     }
 }

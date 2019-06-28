@@ -1,4 +1,5 @@
 // ReSharper disable MemberCanBePrivate.Global
+
 namespace Silo.Devices
 {
     /// <summary>
@@ -34,14 +35,7 @@ namespace Silo.Devices
     /// </summary>
     public class EightBitAdder : Component
     {
-        private readonly Component _fa1;
-        private readonly Component _fa2;
-        private readonly Component _fa3;
-        private readonly Component _fa4;
-        private readonly Component _fa5;
-        private readonly Component _fa6;
-        private readonly Component _fa7;
-        private readonly Component _ha;
+        #region Constants
 
         public const int A1In = 7;
         public const int B1In = 6;
@@ -51,7 +45,7 @@ namespace Silo.Devices
         public const int F1In = 2;
         public const int G1In = 1;
         public const int H1In = 0;
-        
+
         public const int A2In = 15;
         public const int B2In = 14;
         public const int C2In = 13;
@@ -60,7 +54,7 @@ namespace Silo.Devices
         public const int F2In = 10;
         public const int G2In = 9;
         public const int H2In = 8;
-        
+
         public const int CarryOut = 0;
         public const int AOut = 8;
         public const int BOut = 7;
@@ -70,7 +64,22 @@ namespace Silo.Devices
         public const int FOut = 3;
         public const int GOut = 2;
         public const int HOut = 1;
-        
+
+        #endregion
+
+        #region Subcomponents
+
+        private readonly Component _fa1;
+        private readonly Component _fa2;
+        private readonly Component _fa3;
+        private readonly Component _fa4;
+        private readonly Component _fa5;
+        private readonly Component _fa6;
+        private readonly Component _fa7;
+        private readonly Component _ha;
+
+        #endregion
+
         public EightBitAdder() : base(16, 9)
         {
             _ha = new HalfAdder();
@@ -93,21 +102,14 @@ namespace Silo.Devices
 
         public void AttachToAll(Component comp, int offset = 0)
         {
-            AttachTo(comp, 1, 0 + offset);
-            AttachTo(comp, 2, 1 + offset);
-            AttachTo(comp, 3, 2 + offset);
-            AttachTo(comp, 4, 3 + offset);
-            AttachTo(comp, 5, 4 + offset);
-            AttachTo(comp, 6, 5 + offset);
-            AttachTo(comp, 7, 6 + offset);
-            AttachTo(comp, 8, 7 + offset);
+            AttachRange(comp, 1, 8, offset: offset);
         }
-        
+
         public override void Update()
         {
             _ha.SetPortState(0, GetPortInState(A1In));
             _ha.SetPortState(1, GetPortInState(A2In));
-                
+
             _fa1.SetPortState(0, GetPortInState(B1In));
             _fa1.SetPortState(1, GetPortInState(B2In));
 

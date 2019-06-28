@@ -14,11 +14,15 @@ namespace Silo.Devices
     /// </summary>
     public class FullAdder : Component
     {
+        #region Subcomponents
+
         private readonly Component _and1;
         private readonly Component _and2;
         private readonly Component _or;
         private readonly Component _xor1;
         private readonly Component _xor2;
+
+        #endregion
 
         public FullAdder() : base(3, 2)
         {

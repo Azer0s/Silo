@@ -14,7 +14,7 @@ namespace Silo.Memory
     /// </summary>
     public class SRFlipFlop : Component
     {
-        public SRFlipFlop() : base(3,2)
+        public SRFlipFlop() : base(3, 2)
         {
             UpdateOutput(1, true);
         }
@@ -45,7 +45,7 @@ namespace Silo.Memory
                     }
                 }
             }
-            
+
             SaveCurrentState();
         }
     }

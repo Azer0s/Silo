@@ -6,7 +6,7 @@ namespace Silo.Components
     public class EightBitDisplay : Component
     {
         public byte Value;
-        
+
         public EightBitDisplay() : base(8, 0)
         {
         }

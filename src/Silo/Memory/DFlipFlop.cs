@@ -13,11 +13,11 @@ namespace Silo.Memory
     /// </summary>
     public class DFlipFlop : Component
     {
-        public DFlipFlop() : base(2,2)
+        public DFlipFlop() : base(2, 2)
         {
             UpdateOutput(1, true);
         }
-        
+
         public override void Update()
         {
             if (Current.SequenceEqual(Last))
@@ -37,6 +37,7 @@ namespace Silo.Memory
                     UpdateOutput(1, !Current[0]);
                 }
             }
+            // ReSharper disable once RedundantIfElseBlock
             else
             {
                 //clock stayed the same

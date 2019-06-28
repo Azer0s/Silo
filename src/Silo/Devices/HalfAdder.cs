@@ -13,9 +13,13 @@ namespace Silo.Devices
     /// </summary>
     public class HalfAdder : Component
     {
+        #region Subcomponents
+
         private readonly Component _and;
         private readonly Component _xor;
 
+        #endregion
+        
         public HalfAdder() : base(2, 2)
         {
             _xor = new XorGate();

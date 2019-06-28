@@ -7,10 +7,10 @@ namespace Silo.Util
     public class Frequency
     {
         private static readonly Regex ParseRegex = new Regex("([\\d]+\\.[\\d]+|[\\d]+) *(Hz|kHz)", RegexOptions.Compiled);
+        private bool kHz;
 
         private double value;
-        private bool kHz;
-        
+
         public static Frequency Parse(string frequency)
         {
             var f = new Frequency();
@@ -42,7 +42,7 @@ namespace Silo.Util
             return TimeSpan.FromSeconds(seconds);
         }
 
-        public static implicit operator TimeSpan (Frequency f)
+        public static implicit operator TimeSpan(Frequency f)
         {
             return f.ToTimeSpan();
         }

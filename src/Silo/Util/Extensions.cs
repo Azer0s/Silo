@@ -18,7 +18,7 @@ namespace Silo.Util
 
             return result;
         }
-        
+
         public static byte ConvertToByte(this bool[] source)
         {
             byte result = 0;
@@ -30,7 +30,7 @@ namespace Silo.Util
             {
                 // if the element is 'true' set the bit at that position
                 if (b)
-                    result |= (byte)(1 << (7 - index));
+                    result |= (byte) (1 << (7 - index));
 
                 index++;
             }

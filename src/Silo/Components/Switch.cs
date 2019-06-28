@@ -6,16 +6,16 @@ namespace Silo.Components
     {
         public Switch() : base(0, 1)
         {
-            _outPorts[0] = new Port(true);
+            OutPorts[0] = new Port(true);
         }
 
         public bool State
         {
-            get => _outPorts[0].State;
+            get => OutPorts[0].State;
             set
             {
-                _outPorts[0].State = value;
-                _outPorts[0].Update();
+                OutPorts[0].State = value;
+                OutPorts[0].Update();
             }
         }
 

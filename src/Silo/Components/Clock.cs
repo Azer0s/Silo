@@ -11,7 +11,7 @@ namespace Silo.Components
             timer.Elapsed += (sender, args) =>
             {
                 UpdateOutput(0, !GetPortState(0));
-                _outPorts[0].Update();
+                OutPorts[0].Update();
             };
             timer.Interval = frequency.TotalMilliseconds;
             timer.Start();

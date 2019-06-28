@@ -170,7 +170,42 @@ namespace SiloTest
 
             #endregion
 
-            Console.ReadKey();
+            #region SR Flip Flop with pseudo clock
+
+            Console.WriteLine("\nSR Flip Flop with pseudo clock");
+            Console.WriteLine("------------------------");
+            
+            var sr = new SRFlipFlop();
+            var sr1 = new Switch();
+            var sr2 = new Switch();
+            var sr3 = new Switch();
+            
+            sr1.AttachTo(sr, 0);
+            sr2.AttachTo(sr, 1);
+            sr3.AttachTo(sr, 2);
+
+            sr1.State = true;
+
+            sr3.State = true;
+            sr3.State = false;
+            
+            Console.WriteLine(sr);
+
+            sr2.State = true;
+            
+            sr3.State = true;
+            sr3.State = false;
+            
+            Console.WriteLine(sr);
+
+            sr1.State = false;
+            
+            sr3.State = true;
+            sr3.State = false;
+            
+            Console.WriteLine(sr);
+
+            #endregion
         }
     }
 }

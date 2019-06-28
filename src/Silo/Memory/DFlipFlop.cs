@@ -17,28 +17,24 @@ namespace Silo.Memory
         {
             UpdateOutput(1, true);
         }
-
-        //Last input
-        private bool[] _last = { false, false };
         
         public override void Update()
         {
-            var current = _inPorts.Select(a => a.State).ToList();
-            if (current.SequenceEqual(_last))
+            if (Current.SequenceEqual(Last))
             {
                 //do nothing
                 return;
             }
 
-            if (current[0] == _last[0])
+            if (Current[0] == Last[0])
             {
                 //value stayed the same
                 //clock changed
 
-                if (current[1])
+                if (Current[1])
                 {
-                    UpdateOutput(0, current[0]);
-                    UpdateOutput(1, !current[0]);
+                    UpdateOutput(0, Current[0]);
+                    UpdateOutput(1, !Current[0]);
                 }
             }
             else
@@ -47,7 +43,7 @@ namespace Silo.Memory
                 //do nothing
             }
             
-            _last = current.ToArray();
+            SaveCurrentState();
         }
     }
 }

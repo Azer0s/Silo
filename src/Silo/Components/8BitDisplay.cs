@@ -13,7 +13,7 @@ namespace Silo.Components
 
         public override void Update()
         {
-            Value = _inPorts.Select(a => a.State).ToArray().ConvertToByte();
+            Value = InPorts.Select(a => a.State).ToArray().ConvertToByte();
         }
 
         public override string ToString()

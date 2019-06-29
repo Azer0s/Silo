@@ -9,6 +9,8 @@ define #1 clk
 define `0 out
 define `1 outInv
 
+set outInv hi
+
 //when! defines a constant trigger
 when! (a is updated) {
     //when without ! defines a trigger that is executed once

@@ -3,6 +3,7 @@
 ## Simulated Logic
 
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/Azer0s/Silo/blob/master/LICENSE)
+[![Nuget](https://img.shields.io/nuget/v/Silo.svg?color=blue)](https://nuget.org/packages/Silo/)
 
 Silo (**Si**mulated **Lo**gic) is a C# framework which allows you to simulate logic systems in code. Silo has many built-in components like gates, ALU's, displays, etc. that will make simulating complex logic systems easier.
 

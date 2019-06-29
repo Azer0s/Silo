@@ -1,0 +1,6 @@
+language: csharp
+mono: none
+dotnet: 2.1
+script:
+  - dotnet build src/Silo.sln
+  - dotnet test src/Silo.sln

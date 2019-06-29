@@ -2,6 +2,7 @@
 
 ## Simulated Logic
 
+[![Build Status](https://travis-ci.org/Azer0s/Silo.svg?branch=master)](https://travis-ci.org/Azer0s/Silo)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/Azer0s/Silo/blob/master/LICENSE)
 [![Nuget](https://img.shields.io/nuget/v/Silo.svg?color=blue)](https://nuget.org/packages/Silo/)
 

@@ -6,6 +6,7 @@ namespace Silo.Memory
     /// <para>Input Map:</para>
     /// 0: A<para/>
     /// 1: Clk<para/>
+    /// 2: Async Reset<para/>
     /// <para/>
     /// Output Map:<para/>
     /// 0: Output<para/>
@@ -13,14 +14,21 @@ namespace Silo.Memory
     /// </summary>
     public class DFlipFlop : Component
     {
-        public DFlipFlop() : base(2, 2)
+        public DFlipFlop() : base(3, 2)
         {
             UpdateOutput(1, true);
         }
 
         public override void DoUpdate()
         {
-            if (Current[0] == Last[0])
+            if (Current[2])
+            {
+                UpdateOutput(0, false);
+                UpdateOutput(1, true);
+                return;
+            }
+            
+            if (Current[1] != Last[1])
             {
                 //value stayed the same
                 //clock changed

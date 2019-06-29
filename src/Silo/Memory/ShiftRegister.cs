@@ -28,7 +28,13 @@ namespace Silo.Memory
 
         public override void DoUpdate()
         {
-            //TODO: Handle reset
+            if (Current[2])
+            {
+                _d4.SetPortState(2, Current[2]);
+                _d3.SetPortState(2, Current[2]);
+                _d2.SetPortState(2, Current[2]);
+                _d1.SetPortState(2, Current[2]);
+            }
             
             //Clock updated
             if (Current[1] != Last[1])

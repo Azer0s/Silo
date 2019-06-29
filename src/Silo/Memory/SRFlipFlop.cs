@@ -7,6 +7,7 @@ namespace Silo.Memory
     /// 0: Set<para/>
     /// 1: Reset<para/>
     /// 2: Clk<para/>
+    /// 3: Async Reset<para/>
     /// <para/>
     /// Output Map:<para/>
     /// 0: Output<para/>
@@ -14,13 +15,20 @@ namespace Silo.Memory
     /// </summary>
     public class SRFlipFlop : Component
     {
-        public SRFlipFlop() : base(3, 2)
+        public SRFlipFlop() : base(4, 2)
         {
             UpdateOutput(1, true);
         }
 
         public override void DoUpdate()
         {
+            if (Current[3])
+            {
+                UpdateOutput(0, false);
+                UpdateOutput(1, true);
+                return;
+            }
+            
             if (Current[2] != Last[2])
             {
                 if (Current[2])

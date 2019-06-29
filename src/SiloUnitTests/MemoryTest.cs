@@ -93,6 +93,28 @@ namespace SiloUnitTests
             button.Click();
             button.Click();
             Assert.IsTrue(shift.OutState());
+            
+            serial.State = true;
+            button.Click();
+
+            serial.State = false;
+            button.Click();
+            
+            serial.State = true;
+            button.Click();
+            
+            var rst = new Button();
+            rst.AttachTo(shift, 2);
+            rst.Click();
+            
+            button.Click();
+            Assert.IsFalse(shift.OutState());
+            button.Click();
+            Assert.IsFalse(shift.OutState());
+            button.Click();
+            Assert.IsFalse(shift.OutState());
+            button.Click();
+            Assert.IsFalse(shift.OutState());
         }
     }
 }

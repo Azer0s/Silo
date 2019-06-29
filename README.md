@@ -5,7 +5,7 @@
 [![Launch](https://img.shields.io/badge/launch-dotnetfiddle-orange.svg)](https://dotnetfiddle.net/bYoTBH)
 [![Nuget](https://img.shields.io/nuget/v/Silo.svg?color=blue)](https://nuget.org/packages/Silo/)
 [![Build Status](https://travis-ci.org/Azer0s/Silo.svg?branch=master)](https://travis-ci.org/Azer0s/Silo)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/Azer0s/Silo/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/Azer0s/Silo.svg)](https://github.com/Azer0s/Silo/blob/master/LICENSE)
 
 Silo (**Si**mulated **Lo**gic) is a C# framework which allows you to simulate logic systems in code. Silo has many built-in components like gates, ALU's, displays, etc. that will make simulating complex logic systems easier.
 

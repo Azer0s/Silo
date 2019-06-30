@@ -9,8 +9,8 @@
 #define `0 out
 #define `1 outInv
 
-when! (out is updated){
-	outInv := ~out
+rule (out) {
+    outInv := ~out
 }
 
 //when! defines a constant trigger

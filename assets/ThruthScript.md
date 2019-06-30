@@ -13,8 +13,6 @@ when! (out is updated){
 	outInv := ~out
 }
 
-set outInv hi
-
 //when! defines a constant trigger
 when! (a is updated) {
     //when without ! defines a trigger that is executed once

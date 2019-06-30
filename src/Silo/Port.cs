@@ -24,7 +24,7 @@ namespace Silo
                 }
                 else
                 {
-                    throw new Exception("Can't modify state of a mutable port!");
+                    throw new Exception("Can't modify state of an immutable port!");
                 }
             }
         }

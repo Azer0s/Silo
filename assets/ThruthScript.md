@@ -34,7 +34,7 @@ when! (a is updated) {
 #define `0 out
 
 when! ([a,b] is updated) {
-	out := a & b
+    out := a & b
 }
 ```
 
@@ -48,18 +48,18 @@ when! ([a,b] is updated) {
 #define `0-`7 display
 
 when! (input is updated) {
-	display := input => {
-		'11111100' if '0000'
-		'01100000' if '0001'
-		'11011010' if '0010'
-		'11110010' if '0011'
+    display := input => {
+        '11111100' if '0000'
+        '01100000' if '0001'
+        '11011010' if '0010'
+        '11110010' if '0011'
         '01100110' if '0100'
         '10110110' if '0101'
         '10111110' if '0110'
         '11100000' if '0111'
         '11111110' if '1000'
         '11110110' if '1001'
-	}
+    }
 }
 ```
 

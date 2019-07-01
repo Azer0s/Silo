@@ -60,13 +60,3 @@ when! (input is updated) {
     }
 }
 ```
-
-### PWM Module
-
-```cpp
-#define #0<0,15> a //little endian would be other way round
-
-when! (a is rising) {
-    //Todo [..]
-}
-```

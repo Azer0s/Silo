@@ -9,11 +9,17 @@ namespace Silo.Components
     /// </summary>
     public class Inverter : Component
     {
+        /// <summary>
+        /// Initialize new inverter
+        /// </summary>
         public Inverter() : base(1, 1)
         {
             UpdateOutput(0, true);
         }
 
+        /// <summary>
+        /// Update the component
+        /// </summary>
         public override void DoUpdate()
         {
             UpdateOutput(0, !GetPortInState(0));

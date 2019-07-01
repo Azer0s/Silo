@@ -82,6 +82,9 @@ namespace Silo.Devices
 
         #endregion
 
+        /// <summary>
+        /// Initialize new 8 bit adder
+        /// </summary>
         public EightBitAdder() : base(16, 9)
         {
             _ha = new HalfAdder();
@@ -102,11 +105,19 @@ namespace Silo.Devices
             _fa6.AttachTo(_fa7, 1, 2);
         }
 
+        /// <summary>
+        /// Attach component outputs (without carry - 1 to 8) to another component
+        /// </summary>
+        /// <param name="comp">Target component</param>
+        /// <param name="offset">Offset on component to connect to</param>
         public void AttachToAll(Component comp, int offset = 0)
         {
             AttachRange(comp, 1, 8, offset: offset);
         }
 
+        /// <summary>
+        /// Update the component
+        /// </summary>
         public override void DoUpdate()
         {
             _ha.SetPortState(0, GetPortInState(A1In));

@@ -28,11 +28,18 @@ namespace Silo.Components
         {
         }
 
+        /// <summary>
+        /// Update the component
+        /// </summary>
         public override void DoUpdate()
         {
             Value = InPorts.Select(a => a.State).ToArray().ConvertToByte();
         }
 
+        /// <summary>
+        /// Print the value of the display
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"Value: {Value}";

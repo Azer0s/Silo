@@ -12,11 +12,19 @@ namespace Silo.Memory
     /// </summary>
     public class DFlipFlop : Component
     {
+        /// <summary>
+        /// Initialize new D-Flip-Flop
+        /// </summary>
         public DFlipFlop() : base(3, 2)
         {
             UpdateOutput(1, true);
         }
 
+        /// <summary>
+        /// Update the component
+        /// If pin 2 is hi, reset. Stay in reset as long as pin 2 is hi.<para/>
+        /// If the clock (pin 1) was updated and is rising edge, update the component.<para/>
+        /// </summary>
         public override void DoUpdate()
         {
             if (Current[2])

@@ -18,6 +18,9 @@ namespace Silo.Components
     {
         private byte _state;
 
+        /// <summary>
+        /// Initialize new 8 bit input
+        /// </summary>
         public EightBitInput() : base(0, 8)
         {
             OutPorts[0] = new Port(true);
@@ -30,6 +33,9 @@ namespace Silo.Components
             OutPorts[7] = new Port(true);
         }
 
+        /// <summary>
+        /// State of the output pins as a byte
+        /// </summary>
         public byte State
         {
             get => _state;
@@ -58,19 +64,12 @@ namespace Silo.Components
             }
         }
 
-        public void AttachTo(Component component)
-        {
-            AttachTo(component, 0, 0);
-            AttachTo(component, 1, 1);
-            AttachTo(component, 2, 2);
-            AttachTo(component, 3, 3);
-            AttachTo(component, 4, 4);
-            AttachTo(component, 5, 5);
-            AttachTo(component, 6, 6);
-            AttachTo(component, 7, 7);
-        }
-
-        public new void AttachTo(Component component, int offset)
+        /// <summary>
+        /// Attach the output pins to another component
+        /// </summary>
+        /// <param name="component">Target component</param>
+        /// <param name="offset">Offset on target component</param>
+        public new void AttachTo(Component component, int offset = 0)
         {
             AttachTo(component, 0, 0 + offset);
             AttachTo(component, 1, 1 + offset);
@@ -82,6 +81,10 @@ namespace Silo.Components
             AttachTo(component, 7, 7 + offset);
         }
 
+        /// <summary>
+        /// Update the component
+        /// </summary>
+        /// <exception cref="NotImplementedException">This component doesn't have/need a DoUpdate implementation</exception>
         public override void DoUpdate()
         {
             throw new NotImplementedException();

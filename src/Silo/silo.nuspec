@@ -16,5 +16,6 @@
     <files>
         <file src="bin/Release/netcoreapp2.2/Silo.dll" target="lib/netcoreapp2.2"/>
         <file src="bin/Release/netcoreapp2.2/Silo.xml" target="lib/netcoreapp2.2"/>
+        <file src="bin/Release/netcoreapp2.2/Silo.deps.json" target="lib/netcoreapp2.2"/>
     </files>
 </package>

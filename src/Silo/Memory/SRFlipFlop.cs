@@ -15,11 +15,21 @@ namespace Silo.Memory
     /// </summary>
     public class SRFlipFlop : Component
     {
+        /// <summary>
+        /// Initialize new SR-Flip-FLop
+        /// </summary>
         public SRFlipFlop() : base(4, 2)
         {
             UpdateOutput(1, true);
         }
 
+        /// <summary>
+        /// Update the component
+        /// If pin 3 is hi, reset. Stay in reset as long as pin 2 is hi.<para/>
+        /// If the clock (pin 2) was updated and is rising edge, update the component.<para/>
+        /// If pin 0 is hi, set the output to hi.<para/>
+        /// * Else: If pin 1 is hi, set the output to lo
+        /// </summary>
         public override void DoUpdate()
         {
             if (Current[3])

@@ -32,10 +32,22 @@ namespace Silo.Memory
     /// </summary>
     public class Counter : Component
     {
+        /// <summary>
+        /// Initialize new counter
+        /// </summary>
         public Counter() : base(13, 9)
         {
         }
 
+        /// <summary>
+        /// Update the component<para/>
+        /// If pin 0 is hi, reset. Stay in reset as long as pin 0 is hi.<para/>
+        /// If the clock (pin 4) was updated and is rising edge, update the component.<para/>
+        /// If pin 1 is hi, do a load operation.<para/>
+        /// * Else: If pin 3 is hi, do a in-/decrement operation.<para/>
+        /// * * If pin 2 is hi, do a increment operation.<para/>
+        /// * * Else: Do a decrement operation.
+        /// </summary>
         public override void DoUpdate()
         {
             if (Current[0]) //Reset

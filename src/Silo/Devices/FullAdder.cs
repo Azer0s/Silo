@@ -24,6 +24,9 @@ namespace Silo.Devices
 
         #endregion
 
+        /// <summary>
+        /// Initialize new Full Adder
+        /// </summary>
         public FullAdder() : base(3, 2)
         {
             _xor1 = new XorGate();
@@ -38,6 +41,9 @@ namespace Silo.Devices
             _and1.AttachTo(_or, 1);
         }
 
+        /// <summary>
+        /// Update the component
+        /// </summary>
         public override void DoUpdate()
         {
             _xor1.SetPortState(0, GetPortInState(0));

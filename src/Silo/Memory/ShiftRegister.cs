@@ -1,5 +1,8 @@
 namespace Silo.Memory
 {
+    /// <summary>
+    /// 4 bit shift register
+    /// </summary>
     public class ShiftRegister4 : Component
     {
         /// <summary>
@@ -26,6 +29,11 @@ namespace Silo.Memory
         private readonly Component _d3 = new DFlipFlop();
         private readonly Component _d4 = new DFlipFlop();
 
+        /// <summary>
+        /// Update the component
+        /// If pin 2 is hi, reset. Stay in reset as long as pin 2 is hi.<para/>
+        /// If the clock (pin 1) was updated and is rising edge, update the component.<para/>
+        /// </summary>
         public override void DoUpdate()
         {
             if (Current[2])

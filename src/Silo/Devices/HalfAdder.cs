@@ -20,12 +20,18 @@ namespace Silo.Devices
 
         #endregion
         
+        /// <summary>
+        /// Initialize new Half Adder
+        /// </summary>
         public HalfAdder() : base(2, 2)
         {
             _xor = new XorGate();
             _and = new AndGate();
         }
 
+        /// <summary>
+        /// Update the component
+        /// </summary>
         public override void DoUpdate()
         {
             _xor.SetPortState(0, GetPortInState(0));

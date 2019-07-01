@@ -3,6 +3,9 @@ using System;
 
 namespace Silo.Util
 {
+    /// <summary>
+    /// Extension methods for Silo
+    /// </summary>
     public static class Extensions
     {
         /// <summary>

@@ -10,10 +10,16 @@ namespace Silo.Gates
     /// </summary>
     public class XorGate : Component
     {
+        /// <summary>
+        /// Initialize new XOR Gate
+        /// </summary>
         public XorGate() : base(2, 1)
         {
         }
 
+        /// <summary>
+        /// Update the component
+        /// </summary>
         public override void DoUpdate()
         {
             UpdateOutput(0, GetPortInState(0) ^ GetPortInState(1));

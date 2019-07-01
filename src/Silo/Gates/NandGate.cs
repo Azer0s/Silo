@@ -10,10 +10,16 @@ namespace Silo.Gates
     /// </summary>
     public class NandGate : Component
     {
+        /// <summary>
+        /// Initialize new NAND Gate
+        /// </summary>
         public NandGate() : base(2, 1)
         {
         }
 
+        /// <summary>
+        /// Update the component
+        /// </summary>
         public override void DoUpdate()
         {
             UpdateOutput(0, !(GetPortInState(0) && GetPortInState(1)));

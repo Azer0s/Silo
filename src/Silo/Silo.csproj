@@ -8,4 +8,15 @@
         <PackageProjectUrl>https://github.com/Azer0s/Silo</PackageProjectUrl>
         <NuspecFile>silo.nuspec</NuspecFile>
     </PropertyGroup>
+
+    <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+        <ItemGroup>
+            <DocFile Include="bin\$(Configuration)\$(TargetFramework)\$(RuntimeIdentifier)\$(TargetName).xml" />
+        </ItemGroup>
+        <Copy SourceFiles="@(DocFile)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" />
+    </Target>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <DocumentationFile>bin\Release\netcoreapp2.2\Silo.xml</DocumentationFile>
+    </PropertyGroup>
 </Project>

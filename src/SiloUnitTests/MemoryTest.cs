@@ -163,6 +163,21 @@ namespace SiloUnitTests
 
             reset.State = true;
             Assert.AreEqual(0, display.Value);
+
+            reset.State = false;
+            loadOrCount.State = true;
+            input.State = 254;
+            clock.Click();
+
+            Assert.IsFalse(counter.OutState());
+
+            loadOrCount.State = false;
+            countToggle.State = true;
+            upOrDown.State = true;
+            clock.Click();
+            clock.Click();
+            
+            Assert.IsTrue(counter.OutState());
         }
     }
 }

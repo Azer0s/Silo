@@ -7,7 +7,7 @@
 ```
 cd src
 cd Silo
-dotnet pack
+dotnet pack -c Release
 ```
 
 ### Step 3: Validate package

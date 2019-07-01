@@ -7,17 +7,35 @@ using System.Reflection;
 
 namespace Silo
 {
+    /// <summary>
+    /// Base class for all components. Manages ports and previous states.
+    /// </summary>
     public abstract class Component
     {
+        /// <summary>
+        /// Input ports
+        /// </summary>
         protected readonly List<Port> InPorts;
+        /// <summary>
+        /// Output ports
+        /// </summary>
         protected readonly List<Port> OutPorts;
 
-        //Last input
+        /// <summary>
+        /// Last input
+        /// </summary>
         protected bool[] Last = { };
         
-        //Current input
+        /// <summary>
+        /// Current input
+        /// </summary>
         protected bool[] Current => InPorts.Select(a => a.State).ToArray();
 
+        /// <summary>
+        /// Initialize component ports 
+        /// </summary>
+        /// <param name="inPorts">Number of input ports</param>
+        /// <param name="outPorts">Number of output ports</param>
         protected Component(int inPorts, int outPorts)
         {
             InPorts = new List<Port>(inPorts);
@@ -183,6 +201,9 @@ namespace Silo
             Last = Current.Select(a => a).ToArray();
         }
 
+        /// <summary>
+        /// Update the component
+        /// </summary>
         public virtual void Update()
         {
             if (Current.SequenceEqual(Last))

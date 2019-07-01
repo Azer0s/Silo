@@ -37,6 +37,7 @@ namespace Silo.Devices
     {
         #region Constants
 
+#pragma warning disable 1591
         public const int A1In = 7;
         public const int B1In = 6;
         public const int C1In = 5;
@@ -64,6 +65,7 @@ namespace Silo.Devices
         public const int FOut = 3;
         public const int GOut = 2;
         public const int HOut = 1;
+#pragma warning restore 1591
 
         #endregion
 

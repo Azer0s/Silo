@@ -5,26 +5,51 @@ namespace Silo.Util
 {
     public static class Extensions
     {
+        /// <summary>
+        /// Represent this int in Hertz
+        /// </summary>
+        /// <param name="a">int value</param>
+        /// <returns>This int as a Hz Frequency</returns>
         public static Frequency Hz(this int a)
         {
             return Frequency.Parse($"{a} Hz");
         }
 
+        /// <summary>
+        /// Represent this double in Hertz
+        /// </summary>
+        /// <param name="a">double value</param>
+        /// <returns>This double as a Hz Frequency</returns>
         public static Frequency Hz(this double a)
         {
             return Frequency.Parse($"{a} Hz");
         }
         
+        /// <summary>
+        /// Represent this int in Kilohertz
+        /// </summary>
+        /// <param name="a">int value</param>
+        /// <returns>This int as a kHz Frequency</returns>
         public static Frequency kHz(this int a)
         {
             return Frequency.Parse($"{a} kHz");
         }
 
+        /// <summary>
+        /// Represent this double in Kilohertz
+        /// </summary>
+        /// <param name="a">double value</param>
+        /// <returns>This double as a kHz Frequency</returns>
         public static Frequency kHz(this double a)
         {
             return Frequency.Parse($"{a} kHz");
         }
         
+        /// <summary>
+        /// Convert this byte to a little endian bool array
+        /// </summary>
+        /// <param name="b">Byte value</param>
+        /// <returns>Little endian bool array</returns>
         public static bool[] ConvertToBoolArray(this byte b)
         {
             // prepare the return result
@@ -40,6 +65,11 @@ namespace Silo.Util
             return result;
         }
 
+        /// <summary>
+        /// Convert this little endian bool array to a byte
+        /// </summary>
+        /// <param name="source">Little endian bool array</param>
+        /// <returns>Byte value</returns>
         public static byte ConvertToByte(this bool[] source)
         {
             byte result = 0;

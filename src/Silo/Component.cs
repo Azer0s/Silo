@@ -99,6 +99,33 @@ namespace Silo
         }
 
         /// <summary>
+        /// Update output ports by range
+        /// </summary>
+        /// <param name="start">Start output port to update</param>
+        /// <param name="end">End output port to update</param>
+        /// <param name="value">Value to update output port with</param>
+        protected void UpdateOutputRange(int start, int end, bool value)
+        {
+            for (var i = start; i <= end; i++)
+            {
+                UpdateOutput(i, value);
+            }
+        }
+
+        /// <summary>
+        /// Update output ports by value array
+        /// </summary>
+        /// <param name="start">Start output port to update</param>
+        /// <param name="values">Values to update output ports with</param>
+        protected void UpdateOutputRange(int start, bool[] values)
+        {
+            for (var i = 0; i < values.Length; i++)
+            {
+                UpdateOutput(start + i, values[i]);
+            }
+        }
+        
+        /// <summary>
         /// Get the state of the 0th output port
         /// </summary>
         /// <returns>State of the output port</returns>

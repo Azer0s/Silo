@@ -11,6 +11,14 @@ namespace SiloUnitTests
         }
 
         [Test]
+        public void TestStringFrequency()
+        {
+            Assert.AreEqual(Frequency.Parse("1 Hz").ToTimeSpan().TotalMilliseconds, 1000);
+            Assert.AreEqual(Frequency.Parse("1 kHz").ToTimeSpan().TotalMilliseconds, 1);
+            Assert.Catch(() => { Frequency.Parse("1 gHz"); });
+        }
+        
+        [Test]
         public void TestIntFrequency()
         {
             Assert.AreEqual(1.Hz().ToTimeSpan().TotalMilliseconds, 1000);

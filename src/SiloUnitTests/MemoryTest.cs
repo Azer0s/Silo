@@ -39,11 +39,13 @@ namespace SiloUnitTests
             var a = new Switch();
             var b = new Switch();
             var button = new Button();
+            var reset = new Switch();
             var mem = new SRFlipFlop();
             
             a.AttachTo(mem, 0);
             b.AttachTo(mem, 1);
             button.AttachTo(mem, 2);
+            reset.AttachTo(mem, 3);
 
             a.State = true;
             button.Click();
@@ -56,6 +58,9 @@ namespace SiloUnitTests
 
             a.State = false;
             button.Click();
+            Assert.IsFalse(mem.OutState());
+
+            reset.State = true;
             Assert.IsFalse(mem.OutState());
         }
 
@@ -115,6 +120,49 @@ namespace SiloUnitTests
             Assert.IsFalse(shift.OutState());
             button.Click();
             Assert.IsFalse(shift.OutState());
+        }
+
+        [Test]
+        public void CounterTest()
+        {
+            var reset = new Switch();
+            var loadOrCount = new Switch();
+            var upOrDown = new Switch();
+            var countToggle = new Switch();
+            var input = new EightBitInput();
+            var clock = new Button();
+            var counter = new Counter();
+            var display  = new EightBitDisplay();
+            
+            reset.AttachTo(counter, 0);
+            loadOrCount.AttachTo(counter, 1);
+            upOrDown.AttachTo(counter, 2);
+            countToggle.AttachTo(counter, 3);
+            clock.AttachTo(counter, 4);
+            input.AttachTo(counter, 5);
+            
+            counter.AttachRange(display, 1, 8);
+
+            loadOrCount.State = true;
+            input.State = 50;
+            clock.Click();
+            
+            Assert.AreEqual(50, display.Value);
+
+            loadOrCount.State = false;
+            upOrDown.State = true;
+            countToggle.State = true;
+            clock.Click();
+            
+            Assert.AreEqual(51, display.Value);
+
+            upOrDown.State = false;
+            clock.Click();
+            
+            Assert.AreEqual(50, display.Value);
+
+            reset.State = true;
+            Assert.AreEqual(0, display.Value);
         }
     }
 }

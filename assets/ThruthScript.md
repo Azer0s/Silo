@@ -94,9 +94,9 @@ when! ([a,b] is updated) {
             //if result were of type uint<4>, the front part would be cut off
         case 1:
             result := a - b  
-        case '10':
+        case '10': //instead of writing numbers, one can also write pin states
             result := a * b
-        case '11':
+        case 3:
             result := a / b
     }
     

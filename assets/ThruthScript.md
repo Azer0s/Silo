@@ -81,6 +81,7 @@ when! (input is updated) {
 #define #0::#3 a
 #define #4::#7 b
 #define #8::#9 operation
+#define #10 reset
 #define `0::`7 output
 
 var result: uint<8>
@@ -100,6 +101,11 @@ when! ([a,b] is updated) {
     }
     
     output := result
+}
+
+when! (reset is updated) {
+    output := 0
+    |reset| //do nothing and block other operation while reset is hi
 }
 ```
 

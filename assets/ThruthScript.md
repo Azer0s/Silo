@@ -69,7 +69,7 @@ when! (input is updated) {
 #define `0-`7<e> output //you don't have to annotate with <e> as this is the default
 
 when! (input is updated) {
-    output := input //-- this would set the bits, which we don't want   
+    output := input //this would set the bits, which we don't want   
     output := (<e>) input //this casts the input bits to little endian
     output := (<?>) input //<?> converts to target endianess
 }

@@ -93,3 +93,46 @@ Console.WriteLine(flipFlop);
 Thread.Sleep(2000);
 Console.WriteLine(flipFlop);
 ```
+
+### Counter with clock
+
+```cs
+using Silo.Components;
+using Silo.Memory;
+using Silo.Util;
+
+var ctr = new Counter();
+
+var reset = new Button();
+var loadOrCount = new Switch();
+var upOrDown = new Switch();
+var countToggle = new Switch();
+var clock = new Clock(1.kHz());
+var input = new EightBitInput();
+
+var display = new EightBitDisplay();
+
+reset.AttachTo(ctr, 0);
+loadOrCount.AttachTo(ctr, 1);
+upOrDown.AttachTo(ctr, 2);
+countToggle.AttachTo(ctr, 3);
+clock.AttachTo(ctr, 4);
+input.AttachTo(ctr, 5);
+
+ctr.AttachRange(display, 1, 8);
+
+loadOrCount.State = true;
+input.State = 50;
+Thread.Sleep(100); //Wait for clock to cycle
+//Ctr output is now 50
+
+loadOrCount.State = false;
+upOrDown.State = true;
+countToggle.State = true;
+Thread.Sleep(100);
+//Ctr output is now ~53
+
+upOrDown.State = false;
+Thread.Sleep(100);
+//Ctr output is now 50
+```

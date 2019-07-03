@@ -3,10 +3,17 @@
     <PropertyGroup>
         <Description>A simple logic simulation library</Description>
         <Authors>Ariel Simulevski</Authors>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
         <PackageId>Silo</PackageId>
         <PackageProjectUrl>https://github.com/Azer0s/Silo</PackageProjectUrl>
-        <NuspecFile>silo.nuspec</NuspecFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>0.1.7</PackageVersion>
+        <Copyright>2019-present Ariel Simulevski</Copyright>
+        <PackageLicenseUrl>https://github.com/Azer0s/Silo/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageIconUrl>https://github.com/Azer0s/Silo/blob/master/assets/logo.png?raw=true</PackageIconUrl>
+        <RepositoryUrl>https://github.com/Azer0s/Silo</RepositoryUrl>
+        <PackageTags>logic-gates logic-simulator simulator</PackageTags>
+        <RepositoryType>Git</RepositoryType>
+        <TargetFrameworks>netstandard2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
     </PropertyGroup>
 
     <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">

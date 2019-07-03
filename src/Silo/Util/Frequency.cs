@@ -28,7 +28,7 @@ namespace Silo.Util
                 throw new FormatException("Invalid Hz format! Expected Hz or kHz after a decimal number!");
             }
 
-            var groups = ParseRegex.Match(frequency).Groups.Select(a => a.Value).ToArray();
+            var groups = ParseRegex.Match(frequency).Groups.Cast<Group>().Select(a => a.Value).ToArray();
             if (groups[2] == "kHz")
             {
                 f.kHz = true;

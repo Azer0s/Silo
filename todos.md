@@ -2,6 +2,6 @@
 - [ ] Multiplexer
 - [ ] Demultiplexer
 - [x] Shift Register
-- [ ] Counter
+- [x] Counter
 - [x] S-R Flip-Flop
 - [ ] VHDL Simulation

@@ -7,6 +7,7 @@
 [![Build Status](https://travis-ci.org/Azer0s/Silo.svg?branch=master)](https://travis-ci.org/Azer0s/Silo)
 [![codecov](https://codecov.io/gh/Azer0s/Silo/branch/master/graph/badge.svg)](https://codecov.io/gh/Azer0s/Silo)
 [![License](https://img.shields.io/github/license/Azer0s/Silo.svg)](https://github.com/Azer0s/Silo/blob/master/LICENSE)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAzer0s%2FSilo.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAzer0s%2FSilo?ref=badge_shield)
 
 Silo (**Si**mulated **Lo**gic) is a C# framework which allows you to simulate logic systems in code. Silo has many built-in components like gates, ALU's, displays, etc. that will make simulating complex logic systems easier.
 
@@ -136,3 +137,7 @@ upOrDown.State = false;
 Thread.Sleep(100);
 //Ctr output is now 50
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAzer0s%2FSilo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FAzer0s%2FSilo?ref=badge_large)

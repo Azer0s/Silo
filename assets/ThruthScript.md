@@ -109,3 +109,22 @@ when! (reset is updated) {
 }
 ```
 
+### Functions
+Since some devices do not support constructs like functions, having functions and recursion enabled are ruleset options (functions are on by default, recursion off by default).
+
+```cpp
+#rule functions true
+
+setPort(p: `port, val: state) {
+    [p] := val
+    //p := would override the port reference
+}
+
+setPort(p: uint<4>, val: state) {
+    `[p] := val
+}
+
+setPort(`0, hi) //setPort(`0, 1) or setPort(`0, '1') is also valid
+setPort(0, lo) //setPort(0, 0) is also valid
+
+``` 

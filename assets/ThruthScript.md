@@ -123,7 +123,7 @@ setPort(p: `port, val: state) {
 }
 
 setPort(p: uint<4>, val: state) {
-    `[p] := val
+    `[p] := val //this was enabled by the runtimeportaddressing rule
 }
 
 setPort(`0, hi) //setPort(`0, 1) or setPort(`0, '1') is also valid

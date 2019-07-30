@@ -114,6 +114,8 @@ Since some devices do not support constructs like functions, having functions an
 
 ```cpp
 #rule functions true //this is enabled by default
+#rule portreferences true
+#rule runtimeportaddressing true
 
 setPort(p: `port, val: state) {
     [p] := val

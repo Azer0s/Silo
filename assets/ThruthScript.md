@@ -162,3 +162,14 @@ print(val: string) {
 #end
 
 ```
+
+### Structs
+
+```cpp
+#define uint<8> char
+#define char* string
+
+#define [string name, uint<16> age] person
+
+var person1: Person := person("Joe", 35)
+```

@@ -135,3 +135,30 @@ add(a: int<8>, b: int<8>): int<16> {
 
 add(10, 10)
 ``` 
+
+### Native functions
+
+```cpp
+#define uint<8> char
+#define char* string
+
+#if native
+
+@cImport("stdio.h") //importing a local header would look like so: @cImport("./[..].h")
+@cExtern print(val: string): void
+
+#else if vm
+
+print(val: string) {
+    log(val)
+}
+
+#else
+
+print(val: string) {
+    //ignored
+}
+
+#end
+
+```

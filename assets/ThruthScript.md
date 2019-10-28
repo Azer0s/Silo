@@ -171,5 +171,6 @@ print(val: string) {
 
 #define [string name, uint<16> age] person
 
-var person1: Person := person("Joe", 35)
+var person1: person := person("Joe", 35)
+var name: string := person1->name
 ```
